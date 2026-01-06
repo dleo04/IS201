@@ -1,0 +1,144 @@
+/* ===== Base page styling (custom background + fonts + colors) ===== */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif; /* font family requirement */
+  color: #1f2937; /* font color requirement */
+  background: #eef2ff; /* custom background color requirement */
+}
+
+/* Header/nav area */
+.site-header {
+  background: #111827;
+  color: #ffffff;
+  padding: 18px 0;
+}
+
+.nav-wrap {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.page-title {
+  margin: 0 0 10px 0;
+  font-family: Georgia, "Times New Roman", serif; /* second font family */
+  letter-spacing: 0.4px;
+}
+
+.nav-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  margin-right: 14px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Container */
+.container {
+  width: min(1100px, 92%);
+  margin: 22px auto 60px auto;
+}
+
+/* Callout / anchor links */
+.callout {
+  background: #ffffff;
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+}
+
+/* ===== Three+ positioned and styled divs ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  position: relative; /* positioned div */
+}
+
+/* Slightly different positioning per card (still clean) */
+.card-left { top: 0; }
+.card-center { top: 8px; }  /* positioned div */
+.card-right { top: 0; }
+
+/* Image styling */
+.feature-img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Section styling */
+.section {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  margin-top: 18px;
+}
+
+.muted {
+  color: #6b7280;
+}
+
+.small-note {
+  font-size: 0.92rem;
+  color: #4b5563;
+}
+
+/* Responsive YouTube embed */
+.video-wrap {
+  margin-top: 12px;
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 ratio */
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.video-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Tableau container */
+.tableau-wrap {
+  margin-top: 12px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+/* Footer */
+.footer {
+  margin-top: 22px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Simple mobile layout */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .card-center { top: 0; }
+}
